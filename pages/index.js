@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -22,6 +22,8 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const [name, setName] = useState('');
+
   const route = useRouter();
 
   return (
@@ -30,7 +32,7 @@ export default function Home() {
         <title>Who is Quiz</title>
       </Head>
       <QuizContainer>
-        {/* <QuizLogo /> */}
+        <QuizLogo />
         <Widget>
 
           <Widget.Header>
@@ -44,9 +46,12 @@ export default function Home() {
               route.push(`/quiz?name=${name}`);
               console.log('Submiting');
             }}>
-              <input placeholder="Fill your name here" />
-              <button type="submit">
-                Jogar Carl
+              <input 
+                placeholder="Fill your name here" 
+                onChange={(e) => setName(e.target.value)}
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Jogar {name}
               </button>
             </form>
           </Widget.Content>
