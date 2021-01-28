@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -13,63 +13,117 @@ import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import QuizContainer from '../src/components/QuizContainer';
 
+function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit }) {
+  const questionId = `question_${questionIndex}`;
+
+  return (
+    <Widget>
+      <Widget.Header>
+        <h3>
+            Pergunta 
+            {` ${questionIndex + 1} `} 
+            de 
+            {` ${totalQuestions}`}
+        </h3>
+      </Widget.Header>
+    
+      <img 
+        src={question.image}
+        style={{
+          width: '100%',
+          height: '150px',
+          objectFit: 'cover'
+        }}
+      />
+
+      <Widget.Content>
+        <h2>
+          {question.title}
+        </h2>
+
+        <p>
+          {question.description}
+        </p>
+
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          onSubmit();
+        }}>
+          {question.alternatives.map((alternative, index) => (
+            <Widget.Topic
+              as="label"
+              htmlFor={index}
+              key={index}
+            >
+              <input 
+                id={index} 
+                style={{display: 'none'}}
+                type="radio"
+                name={questionId}
+              />
+
+              {alternative}
+            </Widget.Topic>
+          ))}
+
+          <Button type="submit">
+            {`Confirmar`}
+          </Button>
+        </form>
+
+      </Widget.Content>
+
+    </Widget>
+  );
+}
+
+const screenStates = {
+  QUIZ: 'QUIZ',
+  LOADING: 'LOADING',
+  RESULT: 'RESULT',
+}
+
 export default function QuizPage() {
-  const [name, setName] = useState('');
+  const [screenState, setScreenState] = useState(screenStates.LOADING);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const questionIndex = currentQuestion;
+  const totalQuestions = db.questions.length;
+	const question = db.questions[questionIndex];
 
-  const route = useRouter();
+  useEffect(() => {
+    setTimeout(() => {
+      setScreenState(screenStates.QUIZ);
+    }, 1 * 1000);
+  }, []);
 
-	const question = db.questions[0];
-	
+  function handleSubmit() {
+    const nextQuestion = questionIndex + 1;
+
+    if (nextQuestion < totalQuestions) {
+      setCurrentQuestion(questionIndex + 1);  
+    } else {
+      setScreenState(screenStates.RESULT);
+    }
+  }
+
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <Head>
-        <title>Who is Quiz</title>
-      </Head>
       <QuizContainer>
         <QuizLogo />
-        <Widget>
 
-          <Widget.Header>
-            <h3>
-                Pergunta 1 de {`${db.questions.length}`}
-            </h3>
-          </Widget.Header>
-				
-					<img 
-						src={question.image}
-						style={{
-							width: '100%',
-							height: '150px',
-							objectFit: 'cover'
-						}}
-					/>
+        {screenState === screenStates.QUIZ && (
+          <QuestionWidget 
+            question={question}
+            totalQuestions={totalQuestions}
+            questionIndex={questionIndex}
+            onSubmit={handleSubmit}
+          />
+        )}
+        
+        {screenState === screenStates.LOADING && <h1>Carregando</h1>}
 
-          <Widget.Content>
-						<h2>
-							{question.title}
-						</h2>
-
-						<p>
-							{question.description}
-						</p>
-
-						<Button type="submit" disabled={name.length === 0}>
-							{`Confirmar`}
-						</Button>
-          </Widget.Content>
-
-        </Widget>
-
-        <Widget>
-          <Widget.Content>
-            <h1>Folks quizzes</h1>
-
-            <p>Do you know who is...?</p>
-          </Widget.Content>
-        </Widget>
-        <Footer />
+        {screenState === screenStates.RESULT && <div>vc acertou x questões</div>}
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/carloshrf" />
     </QuizBackground>
   );
 }

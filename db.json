@@ -4,25 +4,75 @@
   "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
   "questions": [
     {
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQ1ic9gtjv8jKVAUXX0wn5vGBWePw4S5QdA&usqp=CAU",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://pa1.narvii.com/6534/71d445062977d51db49c398ce9d0ab14651fc486_00.gif",
+      "title": "Quem é esse personagem?",
       "description": "Essa é pra aquecer",
       "answer": 2,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Kuabara",
+        "Jotaro Kujo",
+        "Yusuke Urameshi",
+        "Kenshin Himura"
       ]
     },
     {
-      "image": "https://media4.giphy.com/media/TTy5YmVmhmWhq/giphy.gif?cid=ecf05e47shkh1ctub97l24w7zth98ppfpulisg0s8vjsf1ib&rid=giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
+      "image": "https://i.pinimg.com/originals/75/1e/bd/751ebdacf66989319109a326d2f7efcc.gif",
+      "title": "Qual o nome do personagem que tem a capacidade de se tornar este titã?",
       "description": "Faz tempo em haha",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "Eren Yeager",
+         "Hashirama Senju",
+         "Kurapika",
+         "Valt Aoi"
+      ]
+    },
+    {
+      "image": "https://img.wattpad.com/5f1ccece37ff7280ab70881b9c0699e0ac5c1e0c/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f665a5845454163396f34526144773d3d2d3832313631363034322e313565616265653361323962623037333330303037343735303035352e676966",
+      "title": "Qual heroi se tornou sensei de Genos?",
+      "description": "Faz tempo em haha",
+      "answer": 0,
+      "alternatives": [
+         "Shoto Todoroki",
+         "Dracule Mihawk",
+         "Saitama",
+         "Kaonashi"
+      ]
+    },
+    {
+      "image": "https://i.gifer.com/P07a.gif",
+      "title": "Qual o nome desse baby?",
+      "description": "Faz tempo em haha",
+      "answer": 0,
+      "alternatives": [
+         "Roronoa Zoro",
+         "Brook",
+         "Ichigo",
+         "Beelzebub"
+      ]
+    },
+    {
+      "image": "https://i.pinimg.com/originals/6d/03/54/6d035448aef4284b9243004305651ffe.gif",
+      "title": "Qual personagem é considerado como o 'estouro da boiada'?",
+      "description": "Faz tempo em haha",
+      "answer": 0,
+      "alternatives": [
+         "Chopper",
+         "Vash",
+         "Spike Spiegel",
+         "Tai Kamiya"
+      ]
+    },
+    {
+      "image": "https://media.tenor.com/images/40f3243a0c9daa331dc8726f127cb57d/tenor.gif",
+      "title": "Quem foi o primeiro oponente do Naruto nas lutas preliminares do exame chunin?",
+      "description": "Faz tempo em haha",
+      "answer": 0,
+      "alternatives": [
+         "Kiba",
+         "Leorio",
+         "Ash",
+         "Sagat"
       ]
     }
   ],
