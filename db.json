@@ -18,7 +18,7 @@
     {
       "image": "https://pa1.narvii.com/6946/c6c72b09495321d5f996b8e0d5e5f8d644d979b5r1-500-281_hq.gif",
       "title": "Qual o nome do personagem que tem a capacidade de se transformar nesse titã?",
-      "description": "Faz tempo em haha",
+      "description": "Lutar com ganchos é para os fracos",
       "answer": 0,
       "alternatives": [
          "Eren Yeager",
@@ -30,7 +30,7 @@
     {
       "image": "https://img.wattpad.com/5f1ccece37ff7280ab70881b9c0699e0ac5c1e0c/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f665a5845454163396f34526144773d3d2d3832313631363034322e313565616265653361323962623037333330303037343735303035352e676966",
       "title": "Qual heroi se tornou sensei de Genos?",
-      "description": "Faz tempo em haha",
+      "description": "E há um sensei melhor que esse?",
       "answer": 2,
       "alternatives": [
          "Shoto Todoroki",
@@ -42,7 +42,7 @@
     {
       "image": "https://i.gifer.com/P07a.gif",
       "title": "Qual o nome desse baby?",
-      "description": "Faz tempo em haha",
+      "description": "Cuidado com a pegadinha em",
       "answer": 3,
       "alternatives": [
          "Roronoa Zoro",
@@ -66,13 +66,61 @@
     {
       "image": "https://media.tenor.com/images/40f3243a0c9daa331dc8726f127cb57d/tenor.gif",
       "title": "Quem foi o primeiro oponente do Naruto nas lutas preliminares do exame chunin?",
-      "description": "Faz tempo em haha",
+      "description": "Esse teve que aguentar o Natuto a todo gás",
       "answer": 0,
       "alternatives": [
          "Kiba",
-         "Leorio",
-         "Ash",
-         "Sagat"
+         "Neji",
+         "Gaara",
+         "Rock Lee"
+      ]
+    },
+    {
+      "image": "https://steamuserimages-a.akamaihd.net/ugc/866230113341188206/1D06B816667035C71838FDC2C1ECA7237B0DD3C5/",
+      "title": "Qual o nome do inspetor enviado pela interpol para prender Lupin III ?",
+      "description": "O segredo é nunca desistir",
+      "answer": 1,
+      "alternatives": [
+         "Daisuke Jigen",
+         "Koichi Zenigata",
+         "Goemon Ishikawa",
+         "Kyosuke Mamou"
+      ]
+    },
+    {
+      "image": "https://data.whicdn.com/images/305831637/original.gif",
+      "title": "Quem é conhecido como 'asa negra' no anime Saiki Kusuo no Psi-Nan?",
+      "description": "Um verdadeiro aspirante a heroi",
+      "answer": 3,
+      "alternatives": [
+         "Riki Nendo",
+         "Kineshi Hairo",
+         "Reita Toritsuka",
+         "Shun Kaido"
+      ]
+    },
+    {
+      "image": "https://pa1.narvii.com/6734/d38465ca0a829657767f362e6edb877c6437eb0c_hq.gif",
+      "title": "Como é chamado o espirito que Chihiro, por pena, abrigou na casa de banho por conta de uma tempestade? ",
+      "description": "Não aparenta ser um mau sujeito",
+      "answer": 0,
+      "alternatives": [
+         "kaonashi (Sem rosto)",
+         "Kamaji",
+         "Haku (Dragão branco)",
+         "Yubaba"
+      ]
+    },
+    {
+      "image": "https://uploads.spiritfanfiction.com/fanfics/capitulos/201912/the-lost-canvas-high-18091772-201220190410.gif",
+      "title": "Qual dos 12 cavaleiros de ouro lutou contra Thanatos, o Deus da Morte durante a guerra santa?",
+      "description": "'Consegui dá um soco nele'",
+      "answer": 2,
+      "alternatives": [
+         "Aldebaran de Touro",
+         "Dohko de Libra",
+         "Manigold de Cancer",
+         "Albafica de Peixes"
       ]
     }
   ],
